@@ -3,11 +3,10 @@ FROM ubuntu
 # Install Java.
 RUN \
   apt-get update && \
-  apt-get -y upgrade && \
   apt-get install -y build-essential && \
   apt-get install -y software-properties-common && \
-  apt-get install -y byobu curl git htop man unzip vim wget && \
-  add-apt-repository ppa:openjdk/ppa &&\
+  add-apt-repository ppa:openjdk-r/ppa &&\
+  apt-get update && \
   apt-get install -y openjdk-7-jre && \
   rm -rf /var/lib/apt/lists/*
 
