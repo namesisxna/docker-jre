@@ -2,7 +2,9 @@ FROM ubuntu
 
 # Install Java.
 RUN \
+  apt-get install software-properties-common &&\
   apt-get update && \
+  add-apt-repository ppa:openjdk/ppa &&\
   apt-get install -y openjdk-7-jre && \
   rm -rf /var/lib/apt/lists/*
 
